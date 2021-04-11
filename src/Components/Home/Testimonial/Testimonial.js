@@ -1,0 +1,22 @@
+import React from 'react';
+const Testimonial = (props) => {
+    const { quote, name, from, img } = props.testimonial;
+    return (
+        <div className="col-md-4">
+            <div className="card  shadow-sm">
+                <div className="card-body">
+                    <p className="card-text text-center">{quote}</p>
+                </div>
+                <div className="card-footer ms-5 d-flex  align-items-center text-center">
+                    <img className="mx-3 my-3 ms-5" src={img} alt="" width="60" />
+                    <div>
+                        <h6 style={{ color: '#1cc7c1' }}>{name}</h6>
+                        <p className="m-0">{from}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Testimonial;
